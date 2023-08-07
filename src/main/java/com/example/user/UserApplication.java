@@ -9,10 +9,7 @@ import org.springframework.data.jpa.repository.config.EnableJpaAuditing;
 import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 
 @SpringBootApplication
-@EnableJpaAuditing
-@EnableJpaRepositories
-@EntityScan("com.example.user")
-@ComponentScan("com.example.user.model.user.dto")
+
 public class UserApplication {
 
 	public static void main(String[] args) {
