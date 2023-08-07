@@ -4,7 +4,6 @@ import com.example.user.model.user.dto.User;
 import com.example.user.model.user.request.UserRequest;
 import com.example.user.repository.UserRepository;
 import lombok.AllArgsConstructor;
-import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 
 import java.util.Optional;
@@ -30,7 +29,7 @@ public class UserServiceImpl implements UserService {
         return userRepository.save(user1);
     }
 
-    private User findUser(Long id){
+    private User findUser(Long id) {
         Optional<User> user = userRepository.findById(id);
         return user.get();
     }

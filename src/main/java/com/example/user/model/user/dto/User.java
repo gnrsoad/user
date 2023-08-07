@@ -2,7 +2,7 @@ package com.example.user.model.user.dto;
 
 
 import jakarta.persistence.*;
-import lombok.*;
+import lombok.Data;
 
 
 @Entity
@@ -24,10 +24,6 @@ public class User {
     private String avatar;
     @Column
     private Boolean isdeleted;
-
-
-
-
 
 
 }

@@ -29,9 +29,10 @@ public class UserController {
         userResponse.setPhone(userRequest.getPhone());
         return userResponse;
     }
-    @PutMapping(value = "/editUser/{id}",consumes = (MediaType.APPLICATION_JSON_VALUE))
-    public UserResponse editUser(@PathVariable Long id, @RequestBody UserRequest userRequest){
-        User user =  userService.editUser(userRequest, id) ;
+
+    @PutMapping(value = "/editUser/{id}", consumes = (MediaType.APPLICATION_JSON_VALUE))
+    public UserResponse editUser(@PathVariable Long id, @RequestBody UserRequest userRequest) {
+        User user = userService.editUser(userRequest, id);
         UserResponse userResponse = new UserResponse();
         userResponse.setName(user.getUsername());
         userResponse.setLastname(userRequest.getLastname());
