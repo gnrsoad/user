@@ -2,7 +2,7 @@ package com.example.user.model.user.dto;
 
 
 import jakarta.persistence.*;
-import lombok.*;
+import lombok.Data;
 
 
 @Entity
@@ -14,29 +14,16 @@ public class User {
 
     @Column
     private String username;
-    public User() {
+    @Column
+    private String lastname;
+    @Column
+    private String email;
+    @Column
+    private Integer phone;
+    @Column
+    private String avatar;
+    @Column
+    private Boolean isdeleted;
 
-    }
 
-    public User(Long id, String username) {
-        this.id = id;
-        this.username = username;
-    }
-
-    public Long getId() {
-        return id;
-    }
-
-    public void setId(Long id) {
-        this.id = id;
-    }
-
-    public String getUsername() {
-        return username;
-    }
-
-    public void setUsername(String username) {
-        this.username = username;
-    }
-    // Constructors, getters, setters
 }
